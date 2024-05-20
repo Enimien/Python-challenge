@@ -1,11 +1,14 @@
 # Python-challenge
 Project Overview: PyBank
+In this project, The file is opened in read mode, and the csv reader is created.
+The header row is read and skipped
+iterate over each row, extract the date and profit/loss value.
+update the total number of months and net total profit/loss.
+ Overall the PyBank project is a financial analysis tool written in Python. It processes a dataset containing monthly profit and loss records to generate a comprehensive financial report. The main objectives of this project are to calculate and analyze key financial metrics over a specified period. This includes the total number of months in the dataset, the net total amount of profit/losses, the average monthly change in profits/losses, and identifying the months with the greatest increase and decrease in profits.
 
-The PyBank project is a financial analysis tool written in Python. It processes a dataset containing monthly profit and loss records to generate a comprehensive financial report. The main objectives of this project are to calculate and analyze key financial metrics over a specified period. This includes the total number of months in the dataset, the net total amount of profit/losses, the average monthly change in profits/losses, and identifying the months with the greatest increase and decrease in profits.
 
 
-
-
+While the PyPoll
 
 
 
