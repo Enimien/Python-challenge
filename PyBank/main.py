@@ -7,6 +7,8 @@ with open(budget_csv, 'r') as csvfile:
     reader = csv.reader(csvfile, delimiter = ",")
     next(reader)
 
+ # Initialize variables
+
     count = 0 
     total = 0
     prev_revenue = 0 
@@ -26,14 +28,18 @@ with open(budget_csv, 'r') as csvfile:
             total_change = total_change + revenue_change
             
         prev_revenue = current_revenue
+
+ #Calculate average change
     
     avg_change = total_change / (count - 1)
 
-    
+   ## Print the results 
     print(f'Total number of months: {count}')
     print(f'Total profit/loss: ${total}')
     print(f'Total change: {total_change}')
     print(f'Average change: ${avg_change:.2f}')
+
+ # Update net total amount of "Profit/Losses"
     
     max_increase = max(revenue_change_list)
     max_increase_month = month_of_change[revenue_change_list.index(max_increase)]
@@ -43,7 +49,10 @@ with open(budget_csv, 'r') as csvfile:
     max_decrease = min(revenue_change_list)
     max_decrease_month = month_of_change[revenue_change_list.index(max_decrease)]
 
-    print(f"Greatest Decrease in Profits: {max_decrease_month} (${max_decrease})") 
+    print(f"Greatest Decrease in Profits: {max_decrease_month} (${max_decrease})")
+
+ #The PyBank project simplifies and accelerates financial data analysis, offering clear and concise reports that highlight essential financial metrics and trends.
+
 
 output = (
     
