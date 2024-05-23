@@ -2,7 +2,7 @@ import csv
 #Path to the file
 
 
-PyPollcsv= "./PyPoll/Resources/election_data.csv"
+PyPollcsv = r"C:\Users\enimi\Python-challenge\Python-challenge\Resources\PyPoll.csv"
 count = 0
 candidatelist = []
 unique_candidate = []

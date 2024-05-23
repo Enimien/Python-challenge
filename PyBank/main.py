@@ -1,7 +1,7 @@
 import csv 
 #Path to the file
 
-budget_csv = r"./PyBank/Resources/budget_data.csv"
+budget_csv = r"C:\Users\enimi\Python-challenge\Python-challenge\Resources\PyBank.csv"
 #Read the header row
 with open(budget_csv, 'r') as csvfile:
     reader = csv.reader(csvfile, delimiter = ",")
