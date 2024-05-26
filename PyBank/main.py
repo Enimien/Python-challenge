@@ -1,7 +1,8 @@
-import csv 
+import os
+import csv
 #Path to the file
 
-budget_csv = r"C:\Users\enimi\Python-challenge\Python-challenge\Resources\PyBank.csv"
+budget_csv = os.path.join ('Resources', 'budget_data.csv')
 #Read the header row
 with open(budget_csv, 'r') as csvfile:
     reader = csv.reader(csvfile, delimiter = ",")
@@ -66,6 +67,6 @@ output = (
 
 print(output)
 
-output_file = "./PyBank/analysis/result.txt"
+output_file = "./analysis/result.txt"
 with open(output_file, "w") as f:
     f.write(output)

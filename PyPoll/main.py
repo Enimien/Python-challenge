@@ -1,8 +1,15 @@
-import csv 
-#Path to the file
 
 
-PyPollcsv = r"C:\Users\enimi\Python-challenge\Python-challenge\Resources\PyPoll.csv"
+import os
+
+# Module for reading CSV files
+import csv
+
+csvpath = os.path.join( 'Resources', 'election_data.csv')
+
+
+
+
 count = 0
 candidatelist = []
 unique_candidate = []
@@ -11,10 +18,10 @@ vote_percent = []
 
 # Open the CSV using the set path PyPollcsv
 
-with open(PyPollcsv, newline="") as csvfile:
+with open(csvpath, newline="") as csvfile:
     csvreader = csv.reader(csvfile, delimiter=",")
     csv_header = next(csvreader)
-    # Conduct the ask
+    
     for row in csvreader:
         # Count the total number of votes
         count = count + 1
@@ -51,7 +58,9 @@ print("-------------------------")
 # Print to a text file: election_results.txt
 # Output perhaps needs to be rounded to 3 decimal points. Leaving that formatting out for now) 
 
-with open('election_results.txt', 'w') as text:
+output_file = "./analysis/result.txt"
+with open(output_file, "w") as text:
+
     text.write("Election Results\n")
     text.write("---------------------------------------\n")
     text.write("Total Vote: " + str(count) + "\n")
@@ -62,4 +71,4 @@ with open('election_results.txt', 'w') as text:
     text.write("The winner is: " + winner + "\n")
     text.write("---------------------------------------\n")
     
-    text.write(f"{unique_candidate}: {vote_percent:.3f}%  ({vote_count})\n")
+    text.write(f"{unique_candidate}: {vote_percent}%  ({vote_count})\n")
